@@ -98,283 +98,148 @@ textarea {
 /* ==========================================================================
    NDRW's custom styles
    ========================================================================== */
-
-
-#fullWrapper{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    min-height: 600px;
-    background-color: #202020;
-}
-
-#wrapper{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #ff00aa;
-}
-
-#centerObject{
-    position: absolute;
-    width: 600px;
-    height: 400px;
-    z-index: 1;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
-#Logo{
-    position: relative;
-    width: 600px;
-    height: 250px;
-}
-
-#Logo img{
-    width: 100%;
-}
-
-#slogan{
-    position: absolute;
-    width: 435px;
-    height: 65px;
-    display: inline-block;
-    
-    margin: auto;
-    left: 0;
-    right: 0;
-}
-
-#slogan h1, #slogan div, #prox h3{
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    color: #fcdb32;
-}
-
-.circle{
-    position: relative;
-    width: 7px;
-    height: 7px;
-    line-height: 20px;
-    top: -10px;
-
-    border-radius: 50px;
-    background-color: #fcdb32;
-}
-
-#prox{
-    position: relative;
-    width: 100%;
-    height: 35px;
-    top: 65px;
-    display: inline-block;
-    
-}
-
-#prox h3{
-    position: absolute;
-    width: 100px;
-    margin: auto;
-    left: 0;
-    right: 0;
-}
-
-
-
-
-
-#garnaFooter{
-    position: absolute;
-    width: 100%;
-    height: 65px;
-    bottom: 0;
-    font-family: 'Oswald', sans-serif;
-    font-weight: lighter;
-    text-transform: uppercase;
-    color: #fcdb32;
-    z-index: 10;
-}
-
-.centerData{
-    position: absolute;
-    width: 300px;
-    margin: auto;
-    right: 0;
-    left: 0;
-}
-
-#garnaFooter h5{
-    position: absolute;
-    width: 100px;
-    float: left;
-    display: inline-block;
-}
-
-#garnaFooter a{
-    position: absolute;
-    margin-left: 30px;
-    float: left;
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-}
-
-
-
-
-
-
-
-
-
-#overParticles{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-}
-
-
-
-
-
-
-
-@media (max-width: 767px){
-    #fullWrapper{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
-        background-color: #202020;
+    h1 {
+        font-size: 60px;
+        margin: 0 0;
+        font-family: 'SignPaint', sans-serif;
+        color: #202020;
+        text-shadow: 3px 3px #fcdb32;
     }
 
-    #wrapper{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+    h2 {
+        font-size: 1.5em;
+        margin: 0 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 0;
+        font-family: 'Kalam', sans-serif;
+        color: #fcdb32;
+    }
+
+    h4 {
+        font-size: 1em;
+        margin: 0 0;
+    }
+
+    h5 {
+        font-size: 12px;
+        margin: 0 0;
+        font-family: 'Kalam', sans-serif;
+        color: #fcdb32;
+    }
+
+    h6 {
+        font-size: 0.67em;
+        margin: 0 0;
+    }
+
+    body{
         background-color: #ff00aa;
     }
 
-    #centerObject{
+    #windowWrapper{
         position: absolute;
         width: 100%;
-        height: 245px;
-        z-index: 1;
-        margin: auto;
+        height: 100%;
+        text-transform: uppercase;
+        background-color: #ff00aa;
+        overflow: hidden;
+    }
+
+    #centerWrapper{
+        position: absolute;
+        width: 768px;
+        height: 385px;
+        
+        margin:auto;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
+
+        z-index: 1;
+
+        /*background-color: white;*/
     }
 
-    #Logo{
-        position: relative;
-        width: 90%;
-        height: 35%;
-    }
-
-    #Logo img{
-        width: 100%;
-    }
-
-    #slogan{
-        position: absolute;
-        width: 271px;
-        height: 65px;
-        display: inline-block;
-        font-size: 10px;
-        margin: auto;
-        left: 0;
-        right: 0;
-        top: 110px;
-    }
-
-    #slogan h1, #slogan div, #prox h3{
-        position: relative;
-        display: inline-block;
-        text-transform: uppercase;
-        font-family: 'Oswald', sans-serif;
-        font-weight: 300;
-        color: #fcdb32;
-    }
-
-    .circle{
-        position: relative;
-        width: 7px;
-        height: 7px;
-        line-height: 20px;
-        top: -5px;
-
-        border-radius: 50px;
-        background-color: #fcdb32;
-    }
-
-    #prox{
+    #logoWrapper{
         position: relative;
         width: 100%;
-        height: 35px;
-        top: 65px;
-        display: inline-block;
-        font-size: 
-        
+        height: 280px;
+
+        /*background-color: orange;*/
     }
 
-    #prox h3{
+    #logoWrapper img{
         position: absolute;
-        width: 100px;
-        margin: auto;
-        left: 0;
-        right: 0;
-    }
-
-
-
-
-
-    #garnaFooter{
-        position: absolute;
-        width: 100%;
-        height: 65px;
+        width: 700px;
+        top: 0;
         bottom: 0;
-        font-family: 'Oswald', sans-serif;
-        font-weight: lighter;
-        text-transform: uppercase;
-        color: #fcdb32;
-        z-index: 10;
     }
 
-    .centerData{
-        position: absolute;
-        width: 270px;
-        margin: auto;
-        right: 0;
-        left: 0;
+    #sloganWrapper{
+        position: relative;
+        width: 100%;
+        height: 100px;
+
+        /*background-color: black;*/
     }
 
-    #garnaFooter h5{
-        position: absolute;
-        width: 270px;
+    #lemaWrapper{
+        position: relative;
+        width: 100%;
+        height: 85px;
+
+        /*background-color: aqua;*/
+    }
+
+    #lemaWrapper h1, #lemaWrapper div, #contactWrapper h5, #contactWrapper a {
         float: left;
-        display: inline-block;
     }
 
-    #garnaFooter a{
+    #lemaWrapper .Center{
+        width: 580px;
+    }
+
+    #proxWrapper{
+        position: relative;
+        width: 100%;
+        height: 20px;
+
+       /* background-color: brown;*/
+    }
+
+    #proxWrapper .Center{
+        width: 130px;
+    }
+
+    #contactWrapper{
         position: absolute;
-        margin-left: 30px;
-        float: left;
-        display: inline-block;
+        width: 100%;
+        height: 30px;
+
+        bottom: 0;
+
+        z-index: 1;
+
+        /*background-color: yellow;*/
+    }
+
+    #contactWrapper .Center{
+        width: 220px;
+        height: 20px;
+        top: 0;
+        bottom: 0;
+
+        /*background-color: red;*/
+    }
+
+    #contactWrapper a{
         text-decoration: none;
-        color: #fff;
+        color: #fcdb32;
     }
-
-
 
 
 
@@ -393,28 +258,98 @@ textarea {
         height: 100%;
 
     }
+
+
+
+
+
+
+/*HELPERS*/
+    .Center{
+        position: absolute;
+        margin:auto;
+        right: 0;
+        left: 0;
+    }
+
+    .circle{
+        width: 10px;
+        height: 10px;
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 50px;
+
+        background-color: #202020;
+        box-shadow: 2px 2px #fcdb32;
+    }
+
+/*ENDHELPERS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px){
+    #centerWrapper{
+        width: 300px;
+        height: 175px;
+    }
+
+    #logoWrapper{
+        height: 110px;
+    }
+
+    #logoWrapper img{
+        width: 280px;
+    }
+
+    #sloganWrapper{
+        height: 50px;
+    }
+
+    h1{
+        font-size: 23px !important;
+    }
+
+    .circle{
+        margin-top: 10px;
+    }
+
+    #lemaWrapper{
+        height: 45px;
+    }
+
+    #lemaWrapper .Center{
+        width: 265px;
+    }
+
+    h3{
+        font-size: 8px !important;
+    }
+
+    #proxWrapper .Center{
+        width: 90px;
+    }
+
+    h5{
+        font-size: 7px !important;
+    }
+
+    #contactWrapper .Center{
+        width: 150px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
