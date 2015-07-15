@@ -6,23 +6,79 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Garnacha Digital!</title>
+        <meta name="description" content="Garnacha Digital;
+        Contenido Perrón, Diseño Bonito" />
+
+        <meta name="keywords" content="Garnacha, digital, garnacha digital, social, media, social media, agencia, agency, estrategia, estrategia digital, redes, sociales, redes sociales, lucky, luckyideas, ideas, pata, de, palo, pata de palo, echando pata, echando" />
+
+        <meta property="og:title" content="Garnacha Digital" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="http://garnachadigital.mx/img/share-garnacha-digital.jpg" />
+        <meta property="og:url" content="http://garnachadigital.mx/" />
+        <meta property="og:description" content="Garnacha Digital;
+        Contenido Perrón, Diseño Bonito" />
+        <meta name="robots" content="index, follow" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="icon" type="image/png" href="favicon.png">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <meta name="google-site-verification" content="sGfDV-EWGCnoALXAHcup_vrL1B0CLI9Y86Xarbt_z1U" />
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div id="fullWrapper">
+            <div id="wrapper">
+                <div id="centerObject">
+                    <div id="Logo">
+                        <img src="img/logo_garnacha_digital.svg" alt="Garnacha Digital">
+                    </div>
+
+                    <div id="slogan">
+                        <h1>Contenido Perrón</h1>
+                        <div class="circle"></div>
+                        <h1>Diseño Bonito</h1>
+                    </div>
+
+                    <div id="prox">
+                        <h3>Próximamente</h3>
+                    </div>
+                </div>
+            </div>
+
+            <footer id="garnaFooter">
+                <div class="centerData">
+                    <h5>Contacto: <a href="mailto:alex@garnachadigital.mx"> alex@garnachadigital.mx</a></h5>
+                </div>
+            </footer>
+        </div>
+
+
+
+
+
+
+        <div id="overParticles"></div>
+
+
+
+
+
+
+
+
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -37,6 +93,146 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <script src="js/sketch.js"></script>
+        <script>
+        
+        // ----------------------------------------
+        // Particle
+        // ----------------------------------------
+
+        function Particle( x, y, radius ) {
+            this.init( x, y, radius );
+        }
+
+        Particle.prototype = {
+
+            init: function( x, y, radius ) {
+
+                this.alive = true;
+
+                this.radius = radius || 10;
+                this.wander = 0.15;
+                this.theta = random( TWO_PI );
+                this.drag = 0.92;
+                this.color = '#FCDB32';
+
+                this.x = x || 0.0;
+                this.y = y || 0.0;
+
+                this.vx = 0.0;
+                this.vy = 0.0;
+            },
+
+            move: function() {
+
+                this.x += this.vx;
+                this.y += this.vy;
+
+                this.vx *= this.drag;
+                this.vy *= this.drag;
+
+                this.theta += random( -0.5, 0.5 ) * this.wander;
+                this.vx += sin( this.theta ) * 0.2;
+                this.vy += cos( this.theta ) * 0.2;
+
+                this.radius *= 0.95;
+                this.alive = this.radius > 0.5;
+            },
+
+            draw: function( ctx ) {
+
+                ctx.beginPath();
+                ctx.arc( this.x, this.y, this.radius, 0, TWO_PI );
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        };
+
+        // ----------------------------------------
+        // Example
+        // ----------------------------------------
+
+        var MAX_PARTICLES = 280;
+        var COLOURS = [  '#FCDB32' ];
+
+        var particles = [];
+        var pool = [];
+
+        var demo = Sketch.create({
+            container: document.getElementById( 'overParticles' )
+        });
+
+        demo.setup = function() {
+
+            // Set off some initial particles.
+            var i, x, y;
+
+            for ( i = 0; i < 20; i++ ) {
+                x = ( demo.width * 0.5 ) + random( -100, 100 );
+                y = ( demo.height * 0.5 ) + random( -100, 100 );
+                demo.spawn( x, y );
+            }
+        };
+
+        demo.spawn = function( x, y ) {
+
+            if ( particles.length >= MAX_PARTICLES )
+                pool.push( particles.shift() );
+
+            particle = pool.length ? pool.pop() : new Particle();
+            particle.init( x, y, random( 5, 40 ) );
+
+            particle.wander = random( 0.5, 2.0 );
+            particle.color = random( COLOURS );
+            particle.drag = random( 0.9, 0.99 );
+
+            theta = random( TWO_PI );
+            force = random( 2, 8 );
+
+            particle.vx = sin( theta ) * force;
+            particle.vy = cos( theta ) * force;
+
+            particles.push( particle );
+        };
+
+        demo.update = function() {
+
+            var i, particle;
+
+            for ( i = particles.length - 1; i >= 0; i-- ) {
+
+                particle = particles[i];
+
+                if ( particle.alive ) particle.move();
+                else pool.push( particles.splice( i, 1 )[0] );
+            }
+        };
+
+        demo.draw = function() {
+
+            demo.globalCompositeOperation  = 'lighter';
+
+            for ( var i = particles.length - 1; i >= 0; i-- ) {
+                particles[i].draw( demo );
+            }
+        };
+
+        demo.mousemove = function() {
+
+            var particle, theta, force, touch, max, i, j, n;
+
+            for ( i = 0, n = demo.touches.length; i < n; i++ ) {
+
+                touch = demo.touches[i], max = random( 1, 4 );
+                for ( j = 0; j < max; j++ ) {
+                  demo.spawn( touch.x, touch.y );
+                }
+
+            }
+        };
+        
         </script>
     </body>
 </html>
